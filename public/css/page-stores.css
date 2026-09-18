@@ -58,8 +58,8 @@ a.create-store{
     z-index: 10;
     width: 5.8rem;
     height: 5.8rem;
-    background: var(--accent);
-    border: 1px solid var(--accent);
+    background: #ffd666;
+    border: 1px solid #ddb64d;
     border-radius: 1.6rem;
 
     display: flex;
@@ -71,9 +71,14 @@ a.create-store{
 }
 
 a.create-store:hover{
-    background: var(--accent-hover);
-    border-color: var(--accent-hover);
+    background: #f3c958;
+    border-color: #caa63f;
     transform: translateY(-2px);
+}
+
+a.create-store:focus-visible{
+    outline: 3px solid #ddb64d;
+    outline-offset: 4px;
 }
 
 a.create-store img{
