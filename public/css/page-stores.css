@@ -48,7 +48,7 @@ a.create-store{
 
     width: 6.4rem;
     height: 6.4rem;
-    background: #15C3D6;
+    background: #ffd666;
     border: 0;
     border-radius: 2rem;
 
@@ -60,7 +60,12 @@ a.create-store{
 }
 
 a.create-store:hover{
-    background: #17D6EB;
+    background: #96feff;
+}
+
+a.create-store img{
+    width: 3.2rem;
+    height: 3.2rem;
 }
 
 .leaflet-popup-content-wrapper{
