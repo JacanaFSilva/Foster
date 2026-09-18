@@ -1,80 +1,95 @@
 #page-stores{
     width: 100%;
-    height: 100%;
-
+    min-height: 100vh;
     display: flex;
+    background: var(--bg);
 }
 
 aside{
-    width: clamp(24rem, 25vw, 44rem);
-    background: linear-gradient(329.54deg, #15B6DB 0%, #15D6D6 100%);
-    padding: clamp(3rem, 5vw, 8rem);
+    flex: 0 0 clamp(24rem, 25vw, 38rem);
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: clamp(3rem, 5vw, 7rem);
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-aside h2{
-    margin-top: 6.4rem;
+aside header img{
+    width: min(16rem, 100%);
+    height: auto;
+}
 
-    font: 800 clamp(2rem, 5vw, 3.6rem)/1.1 'Nunito', sans-serif;
+aside h2{
+    margin-top: 5.6rem;
+    color: var(--text);
+    font: 800 clamp(2rem, 4vw, 3.6rem)/1.1 'Nunito', sans-serif;
+    letter-spacing: -0.02em;
 }
 
 aside p{
-    margin-top: 2.4rem;
+    margin-top: 1.8rem;
+    color: var(--muted);
     font: 400 1.6rem/1.5 'Nunito', sans-serif;
 }
 
+aside footer{
+    color: var(--text);
+}
+
 aside footer p{
-    margin: .8rem;
+    margin: .6rem 0 0;
 }
 
 #mapid{
     width: 100%;
-    height: 100%;
-
+    min-height: 100vh;
+    background: var(--surface-strong);
     animation-delay: 200ms;
 }
 
 /* button */
 
 a.create-store{
-    position: absolute;
-    right: 4rem;
-    bottom: 4rem;
-
+    position: fixed;
+    right: clamp(1.8rem, 4vw, 4rem);
+    bottom: clamp(1.8rem, 4vw, 4rem);
     z-index: 10;
-
-    width: 6.4rem;
-    height: 6.4rem;
-    background: #ffd666;
-    border: 0;
-    border-radius: 2rem;
+    width: 5.8rem;
+    height: 5.8rem;
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 1.6rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    transition: background-color 200ms;
+    box-shadow: 0 1.2rem 2.6rem var(--shadow);
+    transition: background-color 200ms, border-color 200ms, transform 200ms;
 }
 
 a.create-store:hover{
-    background: #96feff;
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
 }
 
 a.create-store img{
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.8rem;
+    height: 2.8rem;
 }
 
 .leaflet-popup-content-wrapper{
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1.4rem;
+    box-shadow: 0 1.2rem 2.8rem var(--shadow);
 }
 
 .leaflet-popup-content{
-    color: #0089A5;
+    color: var(--text);
     margin: .8rem 1.2rem;
 
     display: flex;
@@ -85,27 +100,61 @@ a.create-store img{
 .leaflet-popup-content a{
     width: 4rem;
     height: 4rem;
-    background: #15C3D6;
-    box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);
-    border-radius: 12px;
-
+    background: var(--accent);
+    border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: background-color .2s;
 }
 
 .leaflet-popup-content a:hover{
-    background: #17D6EB;
+    background: var(--accent-hover);
 }
 
 .leaflet-popup-tip{
-    display: none;
+    background: var(--surface);
 }
 
 .leaflet-container{
     font: 700 2rem/1 'Nunito', sans-serif;
-
     z-index: 5;
+}
+
+@media (max-width: 700px) {
+    #page-stores {
+        flex-direction: column;
+    }
+
+    #page-stores aside {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 1.8rem 2rem;
+        gap: 1.2rem;
+    }
+
+    #page-stores aside header {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    #page-stores aside header img {
+        width: 5.6rem;
+        flex: 0 0 5.6rem;
+    }
+
+    #page-stores aside h2 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    #page-stores aside p,
+    #page-stores aside footer {
+        display: none;
+    }
+
+    #page-stores #mapid {
+        min-height: calc(100vh - 10rem);
+    }
 }
