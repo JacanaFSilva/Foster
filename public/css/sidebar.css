@@ -29,6 +29,10 @@ aside.sidebar footer{
 }
 
 aside.sidebar footer button{
+    --darkreader-inline-bgcolor: #ffd666 !important;
+    --darkreader-inline-border: #ddb64d !important;
+    --darkreader-inline-color: #202733 !important;
+
     position: relative;
     width: 48px;
     height: 48px;
@@ -51,6 +55,9 @@ aside.sidebar footer button{
 }
 
 aside.sidebar footer button:hover{
+    --darkreader-inline-bgcolor: #f3c958 !important;
+    --darkreader-inline-border: #caa63f !important;
+
     background: #f3c958;
     border-color: #caa63f;
     transform: translateY(-1px);
