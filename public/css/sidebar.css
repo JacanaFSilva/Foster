@@ -10,11 +10,17 @@ aside.sidebar{
     align-items: center;
 }
 
+aside.sidebar > img{
+    width: 18rem;
+    max-width: 100%;
+    height: auto;
+}
+
 aside.sidebar footer button{
     width: 48px;
     height: 48px;
     border: none;
-    background: #12afcb;
+    background: #ffd666;
     border-radius: 1.6rem;
     cursor: pointer;
 
@@ -26,7 +32,12 @@ aside.sidebar footer button{
 }
 
 aside.sidebar footer button:hover{
-    background: #17d6eb;
+    background: #96feff;
+}
+
+aside.sidebar footer button img{
+    width: 2.8rem;
+    height: 2.8rem;
 }
 
 .with-sidebar{
