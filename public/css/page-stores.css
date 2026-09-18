@@ -52,6 +52,10 @@ aside footer p{
 /* button */
 
 a.create-store{
+    --darkreader-inline-bgcolor: #ffd666 !important;
+    --darkreader-inline-border: #ddb64d !important;
+    --darkreader-inline-color: #202733 !important;
+
     position: fixed;
     right: clamp(1.8rem, 4vw, 4rem);
     bottom: clamp(1.8rem, 4vw, 4rem);
@@ -71,6 +75,9 @@ a.create-store{
 }
 
 a.create-store:hover{
+    --darkreader-inline-bgcolor: #f3c958 !important;
+    --darkreader-inline-border: #caa63f !important;
+
     background: #f3c958;
     border-color: #caa63f;
     transform: translateY(-2px);
