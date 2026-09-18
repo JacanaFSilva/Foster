@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#eef1f5" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#171b21" media="(prefers-color-scheme: dark)" />
-  <title>Localize uma Loja | Foster</title>
+  <meta name="theme-color" content="#eef1f5" />
+  <title>Estabelecimentos | Foster</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -33,14 +31,14 @@
       <header>
         <img src="/images/logo.svg" alt="Foster" />
 
-        <h2>Escolha uma loja no mapa</h2>
+        <h2>Encontre estabelecimentos</h2>
 
-        <p>Compre online ou nos visite no centro mais próximo</p>
+        <p>Consulte informações e visualize a localização dos locais cadastrados.</p>
       </header>
 
       <footer>
-        <strong>Dois Vizinhos</strong>
-        <p>Paraná</p>
+        <strong>Estabelecimentos cadastrados</strong>
+        <p>Explore os locais disponíveis no mapa.</p>
       </footer>
     </aside>
 
@@ -48,9 +46,9 @@
 
     <div class="stores">
       {{#each stores}}
-      <span hidden 
-      data-id="{{this.id}}" 
-      data-name="{{this.name}}" 
+      <span hidden
+      data-id="{{this.id}}"
+      data-name="{{this.name}}"
       data-lat="{{this.lat}}"
       data-lng="{{this.lng}}"
       ></span>
@@ -58,13 +56,13 @@
       {{/each}}
     </div>
 
-    <a href="/create-store" class="create-store" title="Cadastre uma loja">
-      <img src="/images/plus.svg" alt="Criar loja" />
+    <a href="/create-store" class="create-store" title="Cadastrar estabelecimento" aria-label="Cadastrar estabelecimento">
+      <img src="/images/plus.svg" alt="" aria-hidden="true" />
     </a>
   </div>
 
   <script src="/scripts/page-stores.js"></script>
-  
+
   <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
