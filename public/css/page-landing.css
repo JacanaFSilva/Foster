@@ -10,11 +10,13 @@
 
 .landing-shell {
   width: 100%;
+  height: 100dvh;
   min-height: 100vh;
   margin: 0;
-  padding: clamp(2.2rem, 3.5vw, 4rem) clamp(2rem, 4vw, 4.8rem);
+  padding: clamp(1.8rem, 3vw, 3.2rem) clamp(1.8rem, 4vw, 4.8rem);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .landing-header {
@@ -58,19 +60,18 @@
 
 .landing-main {
   flex: 1;
+  min-height: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: clamp(4rem, 7vh, 6rem);
-  padding: clamp(4rem, 7vh, 6rem) 0 1rem;
+  align-items: center;
+  padding: clamp(2.5rem, 5vh, 5rem) 0;
 }
 
 .hero {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(36rem, 0.95fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(34rem, 0.95fr);
   align-items: center;
-  gap: clamp(3rem, 5vw, 6rem);
+  gap: clamp(2.5rem, 5vw, 6rem);
 }
 
 .hero-content {
@@ -90,7 +91,7 @@
   max-width: 68rem;
   margin: 0;
   color: var(--text);
-  font-size: clamp(4.4rem, 6.3vw, 7rem);
+  font-size: clamp(4.2rem, 6vw, 7rem);
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.04em;
@@ -148,69 +149,32 @@
 }
 
 .city-illustration {
-  width: min(100%, 56rem);
+  width: min(100%, 58rem);
+  max-height: 58vh;
   height: auto;
   display: block;
+  object-fit: contain;
   filter: drop-shadow(0 1.8rem 2.6rem rgba(32, 39, 51, 0.08));
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--border);
-}
-
-.feature {
-  min-height: 12rem;
-  padding: 2rem 2.4rem 0 0;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  align-content: start;
-}
-
-.feature + .feature {
-  padding-left: 2.4rem;
-  border-left: 1px solid var(--border);
-}
-
-.feature-number {
-  color: #b28d2b;
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.feature h2 {
-  margin: 0;
-  color: var(--text);
-  font-size: 1.55rem;
-  font-weight: 800;
-}
-
-.feature p {
-  margin: 0.7rem 0 0;
-  color: var(--muted);
-  font-size: 1.4rem;
-  line-height: 1.45;
 }
 
 @media (max-width: 900px) {
   .landing-main {
-    padding-top: 5rem;
+    justify-content: center;
+    padding: 2rem 0;
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1fr) minmax(28rem, 0.8fr);
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .hero h1 {
-    font-size: clamp(4rem, 7vw, 5.6rem);
+    font-size: clamp(3.8rem, 7vw, 5.6rem);
   }
 
   .city-illustration {
-    width: min(100%, 40rem);
+    width: min(100%, 36rem);
+    max-height: 32vh;
   }
 }
 
@@ -244,33 +208,30 @@
   }
 
   .hero-visual {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .city-illustration {
     width: min(100%, 42rem);
   }
-
-  .features {
-    grid-template-columns: 1fr;
-  }
-
-  .feature,
-  .feature + .feature {
-    min-height: auto;
-    padding: 1.8rem 0;
-    border-left: 0;
-    border-top: 1px solid var(--border);
-  }
-
-  .feature:first-child {
-    border-top: 0;
-  }
 }
 
 @media (max-width: 520px) {
   .landing-shell {
-    padding: 2rem 1.8rem 2.8rem;
+    padding: 1.6rem 1.6rem 1.8rem;
+  }
+
+  .landing-header {
+    min-height: 5rem;
+  }
+
+  #logo {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  .brand span {
+    font-size: 1.7rem;
   }
 
   .header-description {
@@ -278,35 +239,31 @@
   }
 
   .landing-main {
-    padding-top: 4.8rem;
-    gap: 4rem;
+    padding: 1.5rem 0;
   }
 
   .eyebrow {
-    margin-bottom: 1.2rem;
-    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.7rem, 13vw, 5rem);
+    font-size: clamp(3.5rem, 13vw, 4.8rem);
   }
 
   .hero-description {
-    margin-top: 1.8rem;
-    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .hero-action {
     width: 100%;
     justify-content: space-between;
-    margin-top: 2.6rem;
-  }
-
-  .hero-visual {
-    justify-content: center;
+    margin-top: 2.2rem;
   }
 
   .city-illustration {
-    width: min(100%, 34rem);
+    width: min(100%, 30rem);
+    max-height: 27vh;
   }
 }
