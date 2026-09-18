@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#eef1f5" />
     <title>{{store.name}} | Foster</title>
 
     <link
@@ -37,7 +39,7 @@
     <div id="page-store">
       <aside class="animate-right sidebar">
 
-        <img src="/images//logo.svg" alt="Foster">
+        <img src="/images/logo-icon.png" alt="Foster">
 
         <footer>
           <button onclick="history.back()">
@@ -70,9 +72,10 @@
               <div id="mapid"></div>
               <span data-lat="{{store.lat}}" data-lng="{{store.lng}}"></span>
               <footer>
-                <a 
-                target="_blank"
-                href="https://maps.google.com/mobile?q={{store.lat}},{{store.lng}}&z=15"Ver rotas no Google Maps></a>
+                <a
+                  target="_blank"
+                  href="https://maps.google.com/mobile?q={{store.lat}},{{store.lng}}&z=15"
+                >Ver rotas no Google Maps</a>
               </footer>
             </div>
             
@@ -92,19 +95,15 @@
               </div>
 
               {{#if store.open_on_weekends}}
-                <div class="open-on-weekends">
-                  
-                  <img src="/images/info-red.svg" alt="Informações" />
+                <div class="open-on-weekends open">
+                  <img src="/images/info.svg" alt="Informações" />
                   Atendemos fim de semana
-                  
                 </div>
                 {{else}}
                   <div class="open-on-weekends closed">
-                  
-                  <img src="/images/info.svg" alt="Informações" />
-                  Não atendemos fim de semana
-                  
-                </div>
+                    <img src="/images/info-red.svg" alt="Informações" />
+                    Não atendemos fim de semana
+                  </div>
               {{/if}}
             </div>
 
