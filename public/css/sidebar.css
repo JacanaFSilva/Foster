@@ -12,20 +12,33 @@ aside.sidebar{
 }
 
 aside.sidebar > img{
+    display: block;
     width: 64px;
-    max-width: 64px;
-    height: auto;
+    height: 64px;
+    max-width: none;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+aside.sidebar footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 aside.sidebar footer button{
     position: relative;
     width: 48px;
     height: 48px;
+    min-width: 48px;
     padding: 0;
+    margin: 0;
     border: none;
     background: #ffd666;
     border-radius: 1.6rem;
     cursor: pointer;
+    line-height: 0;
 
     display: flex;
     align-items: center;
@@ -40,11 +53,12 @@ aside.sidebar footer button:hover{
 
 aside.sidebar footer button img{
     position: static;
+    display: block;
+    flex: 0 0 24px;
     width: 24px;
     height: 24px;
-    margin: 0;
+    margin: auto;
     padding: 0;
-    display: block;
     object-fit: contain;
     transform: none;
 }
