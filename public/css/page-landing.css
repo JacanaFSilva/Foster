@@ -6,10 +6,10 @@
 }
 
 #container {
-  width: min(100%, 118rem);
+  width: 100%;
   min-height: 100vh;
   margin: auto;
-  padding: clamp(3rem, 7vw, 7rem) clamp(2.4rem, 6vw, 7rem);
+  padding: clamp(3rem, 5vw, 6rem) clamp(3rem, 6vw, 8rem);
   background: url("../images/bg.svg") no-repeat 92% 58% /
     clamp(20rem, 38vw, 48rem);
   display: flex;
@@ -55,13 +55,13 @@ header {
 }
 
 main {
-  width: min(100%, 92rem);
+  width: 100%;
   margin: auto 0;
   padding: 7rem 0 4rem;
 }
 
 .hero-copy {
-  max-width: 62rem;
+  width: min(100%, 82rem);
 }
 
 .eyebrow {
@@ -84,7 +84,7 @@ main {
 }
 
 .description {
-  max-width: 53rem;
+  max-width: 64rem;
   margin-top: 2.8rem;
   font-size: clamp(1.8rem, 2vw, 2.4rem);
   line-height: 1.45;
@@ -96,11 +96,12 @@ main {
 }
 
 .visit-content {
+  width: 100%;
+  max-width: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
-  max-width: 86rem;
 }
 
 .visit p {
@@ -159,7 +160,7 @@ main {
   #container {
     min-height: 100svh;
     padding: 2.6rem 2rem 3.2rem;
-    background-position: 50% 88%;
+    background-position: 82% 88%;
     background-size: min(32rem, 82vw);
   }
 
@@ -210,7 +211,7 @@ main {
 
 @media (min-width: 768px) and (max-width: 1079px) {
   #container {
-    background-position: 95% 70%;
+    background-position: 92% 70%;
     background-size: 34rem;
   }
 
@@ -219,6 +220,6 @@ main {
   }
 
   .hero-copy h1 {
-    max-width: 58rem;
+    max-width: 68rem;
   }
 }
