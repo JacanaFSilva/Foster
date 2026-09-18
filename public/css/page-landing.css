@@ -9,10 +9,10 @@
 }
 
 .landing-shell {
-  width: min(100%, 124rem);
+  width: 100%;
   min-height: 100vh;
-  margin: 0 auto;
-  padding: clamp(2.4rem, 4vw, 4.8rem) clamp(2rem, 5vw, 6.4rem);
+  margin: 0;
+  padding: clamp(2.2rem, 3.5vw, 4rem) clamp(2rem, 4vw, 4.8rem);
   display: flex;
   flex-direction: column;
 }
@@ -33,10 +33,11 @@
 }
 
 #logo {
-  width: clamp(4.8rem, 5vw, 6.2rem);
-  height: auto;
+  width: clamp(6rem, 6.5vw, 8rem);
+  height: clamp(6rem, 6.5vw, 8rem);
   display: block;
   flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .brand span {
@@ -60,15 +61,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(5rem, 8vh, 8rem);
-  padding: clamp(5rem, 9vh, 8rem) 0 2rem;
+  gap: clamp(4rem, 7vh, 6rem);
+  padding: clamp(4rem, 7vh, 6rem) 0 1rem;
 }
 
 .hero {
+  width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(34rem, 0.9fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(36rem, 0.95fr);
   align-items: center;
-  gap: clamp(4rem, 7vw, 9rem);
+  gap: clamp(3rem, 5vw, 6rem);
 }
 
 .hero-content {
@@ -146,7 +148,7 @@
 }
 
 .city-illustration {
-  width: min(100%, 50rem);
+  width: min(100%, 56rem);
   height: auto;
   display: block;
   filter: drop-shadow(0 1.8rem 2.6rem rgba(32, 39, 51, 0.08));
