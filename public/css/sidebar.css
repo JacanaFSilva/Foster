@@ -11,7 +11,7 @@ aside.sidebar{
 }
 
 aside.sidebar > img{
-    width: 24rem;
+    width: 20rem;
     max-width: 100%;
     height: auto;
 }
@@ -36,8 +36,10 @@ aside.sidebar footer button:hover{
 }
 
 aside.sidebar footer button img{
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
     display: block;
     object-fit: contain;
 }
