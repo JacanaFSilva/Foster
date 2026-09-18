@@ -106,6 +106,10 @@
 }
 
 .hero-action {
+  --darkreader-inline-bgcolor: #ffd666 !important;
+  --darkreader-inline-border: #ddb64d !important;
+  --darkreader-inline-color: #202733 !important;
+
   width: fit-content;
   min-height: 5.8rem;
   margin-top: 3.2rem;
@@ -131,6 +135,9 @@
 }
 
 .hero-action:hover {
+  --darkreader-inline-bgcolor: #f3c958 !important;
+  --darkreader-inline-border: #caa63f !important;
+
   background: var(--brand-yellow-hover);
   border-color: #caa63f;
   transform: translateY(-0.2rem);
