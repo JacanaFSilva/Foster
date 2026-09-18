@@ -169,12 +169,6 @@ The application starts on:
 http://localhost:3000
 ~~~
 
-Swagger documentation is available at:
-
-~~~text
-http://localhost:3000/api-docs
-~~~
-
 For development with automatic restart:
 
 ~~~bash
