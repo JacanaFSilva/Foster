@@ -18,8 +18,10 @@ aside.sidebar > img{
 }
 
 aside.sidebar footer button{
+    position: relative;
     width: 48px;
     height: 48px;
+    padding: 0;
     border: none;
     background: #ffd666;
     border-radius: 1.6rem;
@@ -37,16 +39,14 @@ aside.sidebar footer button:hover{
 }
 
 aside.sidebar footer button img{
-    width: 2rem;
-    height: 2rem;
+    position: static;
+    width: 24px;
+    height: 24px;
     margin: 0;
     padding: 0;
     display: block;
     object-fit: contain;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: none;
 }
 
 .with-sidebar{
