@@ -11,7 +11,6 @@
     <title>Foster | Encontre estabelecimentos</title>
 
     <link rel="icon" href="/images/logo-icon.png" />
-
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/animations.css" />
     <link rel="stylesheet" href="/css/page-landing.css" />
@@ -36,82 +35,76 @@
     </script>
 
     <div id="page-landing">
-      <div id="container">
-        <header>
+      <div class="landing-shell">
+        <header class="landing-header">
           <a href="/" class="brand animate-up" aria-label="Foster - Página inicial">
             <img id="logo" src="/images/logo.svg" alt="" aria-hidden="true" />
             <span>FOSTER</span>
           </a>
 
-          <div class="location animate-up">
-            <strong>Seu catálogo local</strong>
-            <p>Estabelecimentos, informações e localização em um só lugar.</p>
-          </div>
+          <p class="header-description animate-up">
+            Encontre estabelecimentos, consulte informações e veja sua localização.
+          </p>
         </header>
 
-        <main>
-          <div class="hero-grid">
-            <section class="hero-copy">
+        <main class="landing-main">
+          <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
               <span class="eyebrow animate-up">ENCONTRE · CONSULTE · LOCALIZE</span>
 
-              <h1 class="animate-up">
-                Encontre estabelecimentos e descubra onde estão.
+              <h1 id="hero-title" class="animate-up">
+                Encontre o lugar certo para você.
               </h1>
 
-              <p class="description animate-up">
-                O Foster reúne negócios cadastrados em um único lugar, com
-                informações úteis para consultar antes de sair: horários,
-                contato, imagens e localização no mapa.
+              <p class="hero-description animate-up">
+                O Foster reúne estabelecimentos cadastrados em um único catálogo,
+                com informações úteis e localização no mapa.
               </p>
 
-              <div class="highlights" aria-label="Recursos do Foster">
-                <div class="highlight animate-up">
-                  <strong>Catálogo</strong>
-                  <span>Estabelecimentos cadastrados e organizados.</span>
-                </div>
+              <a
+                href="/stores"
+                class="hero-action animate-up"
+                title="Explorar estabelecimentos"
+              >
+                <span>Explorar estabelecimentos</span>
+                <img src="/images/arrow.svg" alt="" aria-hidden="true" />
+              </a>
+            </div>
 
-                <div class="highlight animate-up">
-                  <strong>Informações</strong>
-                  <span>Horários, contato, imagens e detalhes do local.</span>
-                </div>
-
-                <div class="highlight animate-up">
-                  <strong>Mapa</strong>
-                  <span>Veja a localização de cada estabelecimento.</span>
-                </div>
-              </div>
-
-              <section class="visit animate-up">
-                <div class="visit-content">
-                  <div>
-                    <span class="visit-label">COMECE PELO CATÁLOGO</span>
-                    <p>Explore os estabelecimentos disponíveis e acesse os detalhes de cada local.</p>
-                  </div>
-
-                  <a
-                    href="/stores"
-                    title="Explorar estabelecimentos"
-                    class="botaoAmarelo"
-                    aria-label="Explorar estabelecimentos"
-                  >
-                    <span>Explorar estabelecimentos</span>
-                    <img src="/images/arrow.svg" alt="" aria-hidden="true" />
-                  </a>
-                </div>
-              </section>
-            </section>
-
-            <aside class="hero-visual" aria-label="Ilustração de estabelecimentos">
+            <div class="hero-visual animate-up">
               <img
-                class="city-illustration animate-up"
                 src="/images/bg.svg"
-                alt="Ilustração de prédios e estabelecimentos"
+                alt="Ilustração de prédios representando estabelecimentos"
+                class="city-illustration"
               />
-              <span class="visual-caption animate-up">
-                Negócios organizados para você encontrar, consultar e localizar.
-              </span>
-            </aside>
-          </div>
+            </div>
+          </section>
+
+          <section class="features" aria-label="Recursos do Foster">
+            <article class="feature animate-up">
+              <span class="feature-number">01</span>
+              <div>
+                <h2>Estabelecimentos</h2>
+                <p>Consulte os negócios cadastrados no catálogo.</p>
+              </div>
+            </article>
+
+            <article class="feature animate-up">
+              <span class="feature-number">02</span>
+              <div>
+                <h2>Informações</h2>
+                <p>Acesse contato, horários, imagens e detalhes do local.</p>
+              </div>
+            </article>
+
+            <article class="feature animate-up">
+              <span class="feature-number">03</span>
+              <div>
+                <h2>Localização</h2>
+                <p>Visualize onde cada estabelecimento está no mapa.</p>
+              </div>
+            </article>
+          </section>
         </main>
       </div>
     </div>
