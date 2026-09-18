@@ -1,4 +1,8 @@
 #page-landing {
+  --brand-yellow: #ffd666;
+  --brand-yellow-hover: #f3c958;
+  --brand-yellow-border: #ddb64d;
+
   min-height: 100vh;
   background: var(--bg);
   display: flex;
@@ -6,10 +10,10 @@
 }
 
 #container {
-  width: 100%;
+  width: min(100%, 124rem);
   min-height: 100vh;
   margin: auto;
-  padding: clamp(3rem, 5vw, 6rem) clamp(3rem, 6vw, 8rem);
+  padding: clamp(2.6rem, 5vw, 6rem) clamp(2rem, 6vw, 7rem);
   display: flex;
   flex-direction: column;
 }
@@ -24,16 +28,27 @@ header {
 .brand {
   display: inline-flex;
   align-items: center;
+  gap: 1.2rem;
+  color: var(--text);
+  text-decoration: none;
 }
 
 #logo {
-  width: min(24rem, 48vw);
+  width: clamp(4.8rem, 6vw, 6.2rem);
   height: auto;
+  flex: 0 0 auto;
   animation-delay: 50ms;
 }
 
+.brand span {
+  color: var(--text);
+  font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
 .location {
-  max-width: 30rem;
+  max-width: 32rem;
   text-align: right;
   animation-delay: 100ms;
 }
@@ -41,100 +56,152 @@ header {
 .location strong {
   display: block;
   color: var(--text);
-  font-size: clamp(2rem, 2.5vw, 3rem);
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
   font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0.08em;
+  line-height: 1.1;
 }
 
 .location p {
-  margin-top: 0.8rem;
+  margin-top: 0.6rem;
   color: var(--muted);
-  font-size: clamp(1.4rem, 1.5vw, 1.8rem);
+  font-size: clamp(1.3rem, 1.4vw, 1.6rem);
   line-height: 1.4;
 }
 
 main {
   width: 100%;
-  margin: auto 0;
-  padding: 7rem 0 4rem;
+  margin: 0;
+  padding: clamp(5rem, 9vh, 9rem) 0 2rem;
+}
+
+.hero-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(34rem, 0.88fr);
+  align-items: center;
+  gap: clamp(4rem, 7vw, 9rem);
 }
 
 .hero-copy {
-  width: min(100%, 82rem);
+  min-width: 0;
 }
 
 .eyebrow {
   display: inline-block;
   margin-bottom: 1.6rem;
-  color: var(--accent);
-  font-size: 1.4rem;
+  color: #9d7a1f;
+  font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   animation-delay: 120ms;
 }
 
 .hero-copy h1 {
+  max-width: 74rem;
   margin: 0;
   color: var(--text);
-  font-size: clamp(4rem, 7vw, 7.2rem);
+  font-size: clamp(4rem, 6.2vw, 7rem);
   font-weight: 800;
-  line-height: 0.98;
-  letter-spacing: -0.03em;
+  line-height: 0.99;
+  letter-spacing: -0.035em;
   animation-delay: 160ms;
 }
 
 .description {
-  max-width: 64rem;
-  margin-top: 2.8rem;
+  max-width: 68rem;
+  margin-top: 2.6rem;
   color: var(--muted);
-  font-size: clamp(1.8rem, 2vw, 2.4rem);
-  line-height: 1.45;
+  font-size: clamp(1.7rem, 1.8vw, 2.2rem);
+  line-height: 1.55;
   animation-delay: 200ms;
 }
 
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 3.6rem;
+}
+
+.highlight {
+  min-height: 11.2rem;
+  padding: 1.7rem 1.8rem;
+  border: 1px solid var(--border);
+  border-radius: 1.4rem;
+  background: var(--surface);
+  box-shadow: 0 1rem 2.4rem var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.highlight:nth-child(2) {
+  border-top: 3px solid var(--brand-yellow);
+}
+
+.highlight strong {
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.highlight span {
+  color: var(--muted);
+  font-size: 1.45rem;
+  line-height: 1.4;
+}
+
 .visit {
-  margin-top: clamp(5rem, 9vh, 8rem);
+  margin-top: 3.8rem;
 }
 
 .visit-content {
-  width: 100%;
-  max-width: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 3rem;
 }
 
+.visit-label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #9d7a1f;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
 .visit p {
-  max-width: 34rem;
-  color: var(--muted);
-  font-size: clamp(1.7rem, 1.9vw, 2.2rem);
-  line-height: 1.45;
+  max-width: 42rem;
+  color: var(--text);
+  font-size: 1.65rem;
+  line-height: 1.5;
   animation-delay: 230ms;
 }
 
 .visit a {
-  min-width: 19rem;
+  flex: 0 0 auto;
+  min-width: 22rem;
   min-height: 6.4rem;
   padding: 1.4rem 1.8rem 1.4rem 2.2rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--brand-yellow-border);
   border-radius: 1.6rem;
-  background: var(--surface);
-  color: var(--text);
-  box-shadow: 0 1.6rem 3rem var(--shadow);
+  background: var(--brand-yellow);
+  color: #202733;
+  box-shadow: 0 1.4rem 2.8rem rgba(141, 115, 75, 0.15);
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   gap: 1.6rem;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 800;
   transition:
     transform 180ms ease,
     background-color 180ms ease,
     border-color 180ms ease;
-  animation-delay: 260ms;
 }
 
 .visit a span {
@@ -142,58 +209,130 @@ main {
 }
 
 .visit a img {
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .visit a:hover {
-  background: var(--accent-soft);
-  border-color: var(--accent);
+  background: var(--brand-yellow-hover);
+  border-color: #caa63f;
   transform: translateY(-0.2rem);
 }
 
 .visit a:focus-visible {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--brand-yellow-border);
   outline-offset: 4px;
 }
 
-@media (max-width: 767px) {
+.hero-visual {
+  min-width: 0;
+  min-height: 47rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation-delay: 260ms;
+}
+
+.city-illustration {
+  width: min(100%, 49rem);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2rem 2.6rem rgba(32, 39, 51, 0.08));
+  animation-delay: 280ms;
+}
+
+.visual-caption {
+  display: block;
+  max-width: 31rem;
+  margin-top: -1rem;
+  color: var(--muted);
+  font-size: 1.35rem;
+  line-height: 1.45;
+  text-align: center;
+  animation-delay: 320ms;
+}
+
+@media (max-width: 1080px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(28rem, 0.78fr);
+    gap: 4rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.8rem, 6.5vw, 6rem);
+  }
+
+  .hero-visual {
+    min-height: 40rem;
+  }
+
+  .city-illustration {
+    width: min(100%, 39rem);
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 820px) {
   #page-landing {
     min-height: 100svh;
   }
 
   #container {
     min-height: 100svh;
-    padding: 2.6rem 2rem 3.2rem;
+    padding: 2.4rem 2rem 3rem;
   }
 
   header {
     align-items: flex-start;
   }
 
-  #logo {
-    width: min(19rem, 45vw);
-  }
-
   .location {
-    display: none;
+    max-width: 25rem;
   }
 
   main {
-    padding: 7rem 0 2rem;
+    padding-top: 5.2rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
   }
 
   .hero-copy h1 {
-    font-size: clamp(3.8rem, 14vw, 5.8rem);
+    max-width: 62rem;
+    font-size: clamp(3.8rem, 11vw, 5.8rem);
   }
 
   .description {
-    margin-top: 2rem;
-    font-size: 1.75rem;
+    max-width: 60rem;
+    font-size: 1.7rem;
   }
 
-  .visit {
-    margin-top: 4.5rem;
+  .highlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .highlight {
+    padding: 1.5rem;
+  }
+
+  .highlight strong {
+    font-size: 1.4rem;
+  }
+
+  .highlight span {
+    font-size: 1.35rem;
   }
 
   .visit-content {
@@ -201,23 +340,81 @@ main {
     flex-direction: column;
   }
 
-  .visit p {
-    max-width: 30rem;
+  .visit a {
+    width: min(100%, 34rem);
+  }
+
+  .hero-visual {
+    min-height: auto;
+    padding-top: 0;
+  }
+
+  .city-illustration {
+    width: min(100%, 43rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .brand span {
     font-size: 1.7rem;
+  }
+
+  .location {
+    display: none;
+  }
+
+  main {
+    padding-top: 4.6rem;
+  }
+
+  .eyebrow {
+    margin-bottom: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.6rem, 14vw, 5rem);
+  }
+
+  .description {
+    margin-top: 1.8rem;
+    font-size: 1.65rem;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+    margin-top: 2.8rem;
+  }
+
+  .highlight {
+    min-height: 0;
+  }
+
+  .visit {
+    margin-top: 3rem;
+  }
+
+  .visit p {
+    font-size: 1.55rem;
   }
 
   .visit a {
     width: 100%;
     min-width: 0;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1079px) {
-  main {
-    padding-top: 9rem;
+    min-height: 5.8rem;
+    font-size: 1.6rem;
   }
 
-  .hero-copy h1 {
-    max-width: 68rem;
+  .hero-grid {
+    gap: 3.5rem;
+  }
+
+  .city-illustration {
+    width: min(100%, 34rem);
+  }
+
+  .visual-caption {
+    max-width: 28rem;
+    font-size: 1.25rem;
   }
 }
