@@ -4,23 +4,64 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  color: white;
-  background: #ebf2e5;
-}
-
 :root {
   font-size: 62.5%;
+  color-scheme: light;
+
+  --bg: #eef1f5;
+  --surface: #f7f8fa;
+  --surface-strong: #e8edf2;
+  --border: #d6dde6;
+  --text: #202733;
+  --muted: #667384;
+  --accent: #3f67a8;
+  --accent-hover: #315892;
+  --accent-soft: #e8eef8;
+  --success: #33785c;
+  --success-soft: #e7f2ec;
+  --shadow: rgba(32, 39, 51, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg: #171b21;
+    --surface: #1f252d;
+    --surface-strong: #252d37;
+    --border: #36404d;
+    --text: #edf1f6;
+    --muted: #aab4c0;
+    --accent: #82a7e8;
+    --accent-hover: #9ab8ee;
+    --accent-soft: #25334b;
+    --success: #79c19d;
+    --success-soft: #20382e;
+    --shadow: rgba(0, 0, 0, 0.24);
+  }
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: inherit;
 }
 
 body,
 input,
 button,
 textarea {
-  font: 200 1.8rem/1 "Nunito", sans-serif;
-  /*font-size: 18px;
-    line-height: 1;
-    font-weight: 400;
-    font-family: 'Nunito', sans-serif;*/
+  font: 400 1.8rem/1.45 "Nunito", sans-serif;
+}
+
+input,
+button,
+textarea {
+  color: inherit;
 }
