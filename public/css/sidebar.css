@@ -35,9 +35,9 @@ aside.sidebar footer button{
     min-width: 48px;
     padding: 0;
     margin: 0;
-    border: 1px solid var(--border);
-    background: var(--surface-strong);
-    color: var(--text);
+    border: 1px solid #ddb64d;
+    background: #ffd666;
+    color: #202733;
     border-radius: 1.4rem;
     cursor: pointer;
     line-height: 0;
@@ -51,9 +51,14 @@ aside.sidebar footer button{
 }
 
 aside.sidebar footer button:hover{
-    background: var(--accent-soft);
-    border-color: var(--accent);
+    background: #f3c958;
+    border-color: #caa63f;
     transform: translateY(-1px);
+}
+
+aside.sidebar footer button:focus-visible{
+    outline: 3px solid #ddb64d;
+    outline-offset: 4px;
 }
 
 aside.sidebar footer button img{
