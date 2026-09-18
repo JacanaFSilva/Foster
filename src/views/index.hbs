@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foster</title>
+    <meta
+      name="description"
+      content="Foster: encontre estabelecimentos, consulte informações e visualize sua localização no mapa."
+    />
+    <title>Foster | Encontre estabelecimentos</title>
 
     <link rel="icon" href="/images/logo-icon.png" />
 
@@ -11,59 +15,77 @@
     <link rel="stylesheet" href="/css/animations.css" />
     <link rel="stylesheet" href="/css/page-landing.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-  
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
         <div class="vw-plugin-top-wrapper"></div>
       </div>
     </div>
+
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
     </script>
-  
+
     <div id="page-landing">
       <div id="container">
         <header>
-          <img class="animate-up" 
-          id="logo" 
-          src="/images/logo.svg" 
-          alt="Logomarca Foster" /> 
+          <a href="/" class="brand" aria-label="Foster - Página inicial">
+            <img
+              class="animate-up"
+              id="logo"
+              src="/images/logo.svg"
+              alt="Foster"
+            />
+          </a>
 
           <div class="location animate-up">
             <strong>FOSTER</strong>
-            <p>Conveniências e Comércios no Geral</p>
+            <p>Estabelecimentos e negócios em um só lugar.</p>
           </div>
         </header>
 
         <main>
-          <h1 class="animate-up">Visite uma de nossas lojas cadastradas</h1>
+          <section class="hero-copy">
+            <span class="eyebrow animate-up">FOSTER</span>
+
+            <h1 class="animate-up">
+              Encontre estabelecimentos e veja onde estão no mapa.
+            </h1>
+
+            <p class="description animate-up">
+              Consulte informações, horários, imagens, localização e formas de
+              contato de estabelecimentos cadastrados.
+            </p>
+          </section>
 
           <section class="visit">
-            <p class="animate-up">Conheça nossos serviços com apenas um clique</p>
-            <a href="/stores" title="Visite lojas" class="botaoAmarelo">
-              <img src="/images/arrow.svg" alt="Ir para o mapa" />
-            </a>
+            <div class="visit-content">
+              <p class="animate-up">
+                Explore os estabelecimentos cadastrados e escolha onde deseja
+                ir.
+              </p>
+
+              <a
+                href="/stores"
+                title="Explorar estabelecimentos"
+                class="botaoAmarelo animate-up"
+                aria-label="Explorar estabelecimentos"
+              >
+                <span>Explorar</span>
+                <img src="/images/arrow.svg" alt="" aria-hidden="true" />
+              </a>
+            </div>
           </section>
         </main>
       </div>
     </div>
   </body>
 </html>
-
-<!--
-    HTML
-    Hypertext
-        hipertexto
-    Markup
-        marcaçao <tags>
-
-    Language
-            linguagem
-    
--->
