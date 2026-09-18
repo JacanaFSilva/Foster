@@ -1,5 +1,6 @@
 aside.sidebar{
     position: fixed;
+    width: 110px;
     height: 100%;
     padding: 32px 24px;
     background: #15c3d6;
@@ -11,8 +12,8 @@ aside.sidebar{
 }
 
 aside.sidebar > img{
-    width: 20rem;
-    max-width: 100%;
+    width: 64px;
+    max-width: 64px;
     height: auto;
 }
 
@@ -42,6 +43,10 @@ aside.sidebar footer button img{
     padding: 0;
     display: block;
     object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .with-sidebar{
