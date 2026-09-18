@@ -188,19 +188,18 @@
   }
 
   .landing-main {
-    justify-content: flex-start;
-    padding-top: 5.5rem;
-    gap: 5rem;
+    justify-content: center;
+    padding: 1.5rem 0;
   }
 
   .hero {
     grid-template-columns: 1fr;
-    gap: 3.5rem;
+    gap: 1.8rem;
   }
 
   .hero h1 {
     max-width: 62rem;
-    font-size: clamp(4rem, 11vw, 5.6rem);
+    font-size: clamp(3.8rem, 10vw, 5.4rem);
   }
 
   .hero-description {
@@ -212,7 +211,8 @@
   }
 
   .city-illustration {
-    width: min(100%, 42rem);
+    width: min(100%, 38rem);
+    max-height: 30vh;
   }
 }
 
