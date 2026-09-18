@@ -184,7 +184,7 @@ npm run dev
 ## Live Application
 
 - **Main deployment:** https://fosterstores.onrender.com
-- **Test deployment:** https://foster-7u8w.onrender.com/
+<!-- - **Test deployment:** https://foster-7u8w.onrender.com/ */ -->
 
 > Deployments may differ from the local environment and should not be considered a guarantee of persistent production data.
 
